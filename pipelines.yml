@@ -4,6 +4,12 @@ resources:
     configuration:
       gitProvider:  TestIntegration
       path:         aarvyved/testpipe
+      buildOn:
+        commit:            true
+        pullRequestCreate: true
+        pullRequestClose:  true
+        releaseCreate:     true
+        tagCreate:         true
 pipelines:
   - name: testPipeline
     steps:
