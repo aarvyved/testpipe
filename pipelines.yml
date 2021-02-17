@@ -1,0 +1,15 @@
+resources:
+  - name:   res1
+    type:   GitRepo
+    configuration:
+      gitProvider:  TestIntegration
+      path:         aarvyved/testpipe
+steps:
+  - name: bashTest
+    type: Bash
+    configuration:
+      inputResources:
+        - name: res1
+    execution:
+      onExecute:
+        - sleep 10
