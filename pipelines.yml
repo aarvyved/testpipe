@@ -4,12 +4,14 @@ resources:
     configuration:
       gitProvider:  TestIntegration
       path:         aarvyved/testpipe
-steps:
-  - name: bashTest
-    type: Bash
-    configuration:
-      inputResources:
-        - name: res1
-    execution:
-      onExecute:
-        - sleep 10
+pipelines:
+  - name: testPipeline
+    steps:
+      - name: bashTest
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res1
+        execution:
+          onExecute:
+            - sleep 10
