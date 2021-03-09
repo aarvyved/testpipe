@@ -2,7 +2,7 @@ resources:
   - name:   res1
     type:   GitRepo
     configuration:
-      gitProvider:  TestIntegration
+      gitProvider:  GitIntegration
       path:         aarvyved/testpipe
       buildOn:
         commit:            true
