@@ -15,6 +15,11 @@ resources:
     configuration:
       gitProvider: GitIntegration
       path: aarvyved/testpipe
+  - name: out2
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe    
 pipelines:
   - name: testPipeline
     steps:
@@ -33,6 +38,38 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: testPipeline2
+    steps:
+      - name: bashTest
+        type: Bash
+        configuration:
+          inputResources:
+            - name: res1
+          outputResources:
+            - name: out1
+        execution:
+          onExecute:
+            - sleep 10
+      - name: bashTest2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out1
+          outputResources:
+            - name: out2
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: bashTest3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out2
         execution:
           onExecute:
             - sleep 10
