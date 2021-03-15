@@ -10,6 +10,11 @@ resources:
         pullRequestClose:  true
         releaseCreate:     true
         tagCreate:         true
+  - name: out1
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
 pipelines:
   - name: testPipeline
     steps:
@@ -18,6 +23,8 @@ pipelines:
         configuration:
           inputResources:
             - name: res1
+          outputResources:
+            - name: out1
         execution:
           onExecute:
             - sleep 10
@@ -25,7 +32,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: git_SANDWICH
+            - name: out1
         execution:
           onExecute:
             - sleep 10
