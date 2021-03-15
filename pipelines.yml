@@ -21,14 +21,13 @@ pipelines:
         execution:
           onExecute:
             - sleep 10
-  - name: testPipeline2
-    steps:
-      - name: bashTest
+      - name: bashTest2
         type: Bash
         configuration:
           inputResources:
-            - name: res1
+            - name: git_SANDWICH
         execution:
           onExecute:
             - sleep 10
+            - echo "done"
            
