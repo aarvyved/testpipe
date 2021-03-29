@@ -111,8 +111,6 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
-          outputResources:
-            - name: out3
         execution:
           onExecute:
             - sleep 10
@@ -140,6 +138,8 @@ pipelines:
         configuration:
           inputResources:
             - name: out2
+          outputResources:
+            - name: out3
         execution:
           onExecute:
             - sleep 10
