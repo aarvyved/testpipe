@@ -95,3 +95,12 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
+      - name: step5
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out1
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
