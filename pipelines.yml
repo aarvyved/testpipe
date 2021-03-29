@@ -91,7 +91,8 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
-            - name: out2            
+          outputResources:
+            - name: out2
         execution:
           onExecute:
             - sleep 10
