@@ -82,6 +82,8 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
+          outputResources:
+            - name: out2
         execution:
           onExecute:
             - sleep 10
@@ -92,7 +94,7 @@ pipelines:
           inputResources:
             - name: out1
           outputResources:
-            - name: out2
+            - name: out3
         execution:
           onExecute:
             - sleep 10
@@ -119,7 +121,16 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: out2
+            - name: out3
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: step8
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out3
         execution:
           onExecute:
             - sleep 10
