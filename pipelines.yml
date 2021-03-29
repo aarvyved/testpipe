@@ -91,6 +91,7 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
+            - name: out2            
         execution:
           onExecute:
             - sleep 10
@@ -100,6 +101,24 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: step6
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out2
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: step7
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out2
         execution:
           onExecute:
             - sleep 10
