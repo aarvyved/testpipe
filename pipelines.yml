@@ -40,11 +40,11 @@ resources:
     configuration:
       gitProvider: GitIntegration
       path: aarvyved/testpipe
-#   - name: out3
-#     type: GitRepo
-#     configuration:
-#       gitProvider: GitIntegration
-#       path: aarvyved/testpipe
+  - name: out3
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
 #   - name: out4
 #     type: GitRepo
 #     configuration:
