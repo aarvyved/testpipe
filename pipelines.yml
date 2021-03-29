@@ -135,12 +135,12 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-#       - name: step9
-#         type: Bash
-#         configuration:
-#           inputResources:
-#             - name: out3
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+      - name: step9
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out3
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
