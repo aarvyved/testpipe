@@ -1,5 +1,5 @@
 resources:
-  - name:   res1
+  - name:   in1
     type:   GitRepo
     configuration:
       gitProvider:  GitIntegration
@@ -10,6 +10,26 @@ resources:
         pullRequestClose:  true
         releaseCreate:     true
         tagCreate:         true
+  - name: in2
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: in3
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: in4
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: in5
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
   - name: out1
     type: GitRepo
     configuration:
@@ -19,59 +39,229 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: GitIntegration
-      path: aarvyved/testpipe    
+      path: aarvyved/testpipe
+  - name: out3
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: out4
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: out5
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
 pipelines:
-  - name: testPipeline
-    steps:
-      - name: bashTest
-        type: Bash
-        configuration:
-          inputResources:
-            - name: res1
-          outputResources:
-            - name: out1
-        execution:
-          onExecute:
-            - sleep 10
-      - name: bashTest2
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out1
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
   - name: testPipeline2
     steps:
-      - name: bashTest
+      - name: step1
         type: Bash
         configuration:
           inputResources:
-            - name: res1
+            - name: in1
           outputResources:
             - name: out1
+            - name: out2
+            - name: out3
         execution:
           onExecute:
             - sleep 10
-      - name: bashTest2
+      - name: step2
         type: Bash
         configuration:
           inputResources:
             - name: out1
-          outputResources:
-            - name: out2
+#           outputResources:
+#             - name: out2
         execution:
           onExecute:
             - sleep 10
             - echo "done"
-      - name: bashTest3
+      - name: step3
         type: Bash
         configuration:
           inputResources:
             - name: out2
+#           outputResources:
+#             - name: out2
         execution:
           onExecute:
             - sleep 10
             - echo "done"
+      - name: step4
+        type: Bash
+        configuration:
+          inputResources:
+            - name: out3
+#           outputResources:
+#             - name: out2
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+            
+#       - name: bashTest3
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: out2
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
            
+
+# resources:
+#   - name: prop1
+#     type: PropertyBag
+#     configuration:
+#       key1: value1
+#       key2: value2
+#   - name: git
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_IN
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_SANDWICH
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_OUT_1
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_OUT_2
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_OUT_3
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_OUT_4
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+#   - name: git_OUT_5
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/runpoptest
+# pipelines: 
+#   - name: TRIGGER
+#     steps:
+#       - name: TRIGGER
+#         type: Bash
+#         configuration:
+#           outputResources:
+#             - name: prop1
+#         execution:
+#           onExecute:
+#             - write_output prop1 runId=$run_number
+#   - name: TRIGGER_OUT_1
+#     steps:
+#       - name: TRIGGER_OUT_1
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: prop1
+#         execution:
+#           onExecute:
+#             - printenv
+#   - name: TRIGGER_OUT_2
+#     steps:
+#       - name: TRIGGER_OUT_2
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: prop1
+#         execution:
+#           onExecute:
+#             - printenv
+#   - name: IN
+#     steps:
+#       - name: IN_TEST
+#         type: Bash
+#         configuration:
+#           outputResources:
+#             - name: git_IN
+#             - name: git_SANDWICH
+#           inputResources:
+#             - name: git
+#         execution:
+#             onExecute:
+#               - sleep 10
+#               - echo "done"
+#       - name: IN_TEST_OUT
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: git_SANDWICH
+#               trigger: false
+#           inputSteps:
+#             - name: IN_TEST
+#           outputResources:
+#             - name: git_OUT_5
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#       - name: trigger
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: git_OUT_5
+#           outputResources:
+#             - name: git_OUT_1
+#         execution:
+#           onExecute:
+#             - sleep 60
+#             - echo "done"
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: git_OUT_1
+#           outputResources:
+#             - name: git_OUT_2
+#         execution:
+#           onExecute:
+#             - sleep 60
+#             - echo "done"
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: git_OUT_2
+#           outputResources:
+#             - name: git_OUT_3
+#         execution:
+#           onExecute:
+#             - sleep 60
+#             - echo "done"
+#       - name: trigger_3
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: git_OUT_3
+#           outputResources:
+#             - name: git_OUT_4
+#         execution:
+#           onExecute:
+#             - sleep 60
+#             - echo "done"
+
