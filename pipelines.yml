@@ -65,8 +65,8 @@ pipelines:
             - name: in1
           outputResources:
             - name: out1
-            - name: out2
-            - name: out3
+#             - name: out2
+#             - name: out3
         execution:
           onExecute:
             - sleep 10
@@ -85,7 +85,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: out2
+            - name: out1
 #           outputResources:
 #             - name: out2
         execution:
@@ -96,7 +96,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: out3
+            - name: out1
 #           outputResources:
 #             - name: out2
         execution:
