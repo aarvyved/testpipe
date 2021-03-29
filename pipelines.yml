@@ -40,21 +40,21 @@ resources:
     configuration:
       gitProvider: GitIntegration
       path: aarvyved/testpipe
-  - name: out3
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: out4
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: out5
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
+#   - name: out3
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/testpipe
+#   - name: out4
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/testpipe
+#   - name: out5
+#     type: GitRepo
+#     configuration:
+#       gitProvider: GitIntegration
+#       path: aarvyved/testpipe
 pipelines:
   - name: largePipeline
     steps:
@@ -73,6 +73,8 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
+          outputResources:
+            - name: out2
         execution:
           onExecute:
             - sleep 10
@@ -91,8 +93,6 @@ pipelines:
         configuration:
           inputResources:
             - name: out1
-          outputResources:
-            - name: out3
         execution:
           onExecute:
             - sleep 10
@@ -110,7 +110,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: out3
+            - name: out2
         execution:
           onExecute:
             - sleep 10
@@ -119,7 +119,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: out3
+            - name: out2
         execution:
           onExecute:
             - sleep 10
@@ -128,7 +128,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: out3
+            - name: out2
         execution:
           onExecute:
             - sleep 10
