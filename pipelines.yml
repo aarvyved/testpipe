@@ -55,6 +55,11 @@ resources:
 #     configuration:
 #       gitProvider: GitIntegration
 #       path: aarvyved/testpipe
+    - name: buildOut1
+      type: BuildInfo
+      configuration:
+        sourceArtifactory: ArtIntegration
+#         buildName: <string>
 pipelines:
   - name: largePipeline
     steps:
@@ -158,4 +163,15 @@ pipelines:
         execution:
           onExecute:
             - sleep 5
+            - echo "done"
+  - name: resourcesPipeline
+    steps:
+      - name: step1
+        type: Bash
+        configuration:
+          outputResources:
+            - name: buildOut1
+        execution:
+          onExecute:
+            - sleep 10
             - echo "done"
