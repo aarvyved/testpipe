@@ -61,8 +61,8 @@ resources:
       sourceArtifactory: ArtIntegration
 #         buildName: <string>
   - name: cronIn1
-     type: CronTrigger
-     configuration:
+    type: CronTrigger
+    configuration:
        interval: 0 * * * *
 pipelines:
   - name: largePipeline
