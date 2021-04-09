@@ -59,7 +59,8 @@ resources:
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtIntegration
-#         buildName: <string>
+        buildNumber: 1
+        buildName: BuildOut
   - name: cronIn1
     type: CronTrigger
     configuration:
