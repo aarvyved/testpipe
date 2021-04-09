@@ -64,7 +64,12 @@ resources:
   - name: cronIn1
     type: CronTrigger
     configuration:
-       interval: 0 * * * *
+      interval: 0 * * * *
+  - name: aqlIn1
+    type: Aql
+    configuration:
+      sourceArtifactory: ArtIntegration
+      query: items.find({"@build.name":{"$eq":"artifactory"}})
 pipelines:
   - name: largePipeline
     steps:
@@ -175,7 +180,18 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: cronIn1
+            - name: in2
+          outputResources:
+            - name: aqlIn1
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: step2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: aqlIn1
           outputResources:
             - name: buildOut1
         execution:
