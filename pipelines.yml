@@ -55,10 +55,10 @@ resources:
 #     configuration:
 #       gitProvider: GitIntegration
 #       path: aarvyved/testpipe
-    - name: buildOut1
-      type: BuildInfo
-      configuration:
-        sourceArtifactory: ArtIntegration
+  - name: buildOut1
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtIntegration
 #         buildName: <string>
 pipelines:
   - name: largePipeline
