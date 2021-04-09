@@ -174,7 +174,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-          - name:cronIn1
+            - name: cronIn1
           outputResources:
             - name: buildOut1
         execution:
