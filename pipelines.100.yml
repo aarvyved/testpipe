@@ -1,6 +1,6 @@
 
 resources:
-  - name: propertyCanvas500
+  - name: propertyCanvas100
     type: PropertyBag
     configuration:
       key1: value1
@@ -12,35 +12,23 @@ resources:
       buildName: backend_build
       buildNumber: 1
 pipelines:
-  - name: canvasTest500
+  - name: canvasTest100
     steps:
       - name: canvasTest_Root500
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_1_1
+      - name: canvasTest100_1_1_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
-            - name: buildInfoTrigger500
-          inputSteps:
-            - name: canvasTest_Root500
-        execution:
-          onExecute:
-            - sleep 1
-            - echo "done"
-      - name: canvasTest500_1_2_1
-        type: Bash
-        configuration:
-          inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -48,11 +36,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_3_1
+      - name: canvasTest100_1_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -60,11 +48,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_4_1
+      - name: canvasTest100_1_3_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -72,11 +60,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_5_1
+      - name: canvasTest100_1_4_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -84,11 +72,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_6_1
+      - name: canvasTest100_1_5_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -96,11 +84,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_7_1
+      - name: canvasTest100_1_6_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -108,11 +96,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_8_1
+      - name: canvasTest100_1_7_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -120,11 +108,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_9_1
+      - name: canvasTest100_1_8_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -132,11 +120,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_10_1
+      - name: canvasTest100_1_9_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -144,11 +132,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_11_1
+      - name: canvasTest100_1_10_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -156,11 +144,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_12_1
+      - name: canvasTest100_1_11_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -168,11 +156,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_13_1
+      - name: canvasTest100_1_12_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -180,11 +168,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_14_1
+      - name: canvasTest100_1_13_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -192,11 +180,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_15_1
+      - name: canvasTest100_1_14_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -204,11 +192,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_16_1
+      - name: canvasTest100_1_15_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -216,11 +204,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_17_1
+      - name: canvasTest100_1_16_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -228,11 +216,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_18_1
+      - name: canvasTest100_1_17_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -240,11 +228,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_19_1
+      - name: canvasTest100_1_18_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -252,11 +240,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_20_1
+      - name: canvasTest100_1_19_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -264,11 +252,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_21_1
+      - name: canvasTest100_1_20_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -276,11 +264,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_22_1
+      - name: canvasTest100_1_21_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -288,11 +276,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_23_1
+      - name: canvasTest100_1_22_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -300,11 +288,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_24_1
+      - name: canvasTest100_1_23_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -312,11 +300,11 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_1_25_1
+      - name: canvasTest100_1_24_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
             - name: canvasTest_Root500
@@ -324,902 +312,914 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_1_1
+      - name: canvasTest100_1_25_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_1_1
+            - name: canvasTest_Root500
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_2_1
+      - name: canvasTest100_2_1_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_2_1
+            - name: canvasTest100_1_1_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_3_1
+      - name: canvasTest100_2_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_3_1
+            - name: canvasTest100_1_2_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_4_1
+      - name: canvasTest100_2_3_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_4_1
+            - name: canvasTest100_1_3_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_5_1
+      - name: canvasTest100_2_4_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_5_1
+            - name: canvasTest100_1_4_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_6_1
+      - name: canvasTest100_2_5_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_6_1
+            - name: canvasTest100_1_5_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_7_1
+      - name: canvasTest100_2_6_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_7_1
+            - name: canvasTest100_1_6_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_8_1
+      - name: canvasTest100_2_7_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_8_1
+            - name: canvasTest100_1_7_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_9_1
+      - name: canvasTest100_2_8_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_9_1
+            - name: canvasTest100_1_8_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_10_1
+      - name: canvasTest100_2_9_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_10_1
+            - name: canvasTest100_1_9_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_11_1
+      - name: canvasTest100_2_10_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_11_1
+            - name: canvasTest100_1_10_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_12_1
+      - name: canvasTest100_2_11_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_12_1
+            - name: canvasTest100_1_11_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_13_1
+      - name: canvasTest100_2_12_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_13_1
+            - name: canvasTest100_1_12_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_14_1
+      - name: canvasTest100_2_13_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_14_1
+            - name: canvasTest100_1_13_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_15_1
+      - name: canvasTest100_2_14_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_15_1
+            - name: canvasTest100_1_14_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_16_1
+      - name: canvasTest100_2_15_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_16_1
+            - name: canvasTest100_1_15_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_17_1
+      - name: canvasTest100_2_16_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_17_1
+            - name: canvasTest100_1_16_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_18_1
+      - name: canvasTest100_2_17_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_18_1
+            - name: canvasTest100_1_17_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_19_1
+      - name: canvasTest100_2_18_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_19_1
+            - name: canvasTest100_1_18_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_20_1
+      - name: canvasTest100_2_19_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_20_1
+            - name: canvasTest100_1_19_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_21_1
+      - name: canvasTest100_2_20_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_21_1
+            - name: canvasTest100_1_20_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_22_1
+      - name: canvasTest100_2_21_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_22_1
+            - name: canvasTest100_1_21_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_23_1
+      - name: canvasTest100_2_22_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_23_1
+            - name: canvasTest100_1_22_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_24_1
+      - name: canvasTest100_2_23_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_24_1
+            - name: canvasTest100_1_23_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_2_25_1
+      - name: canvasTest100_2_24_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_1_25_1
+            - name: canvasTest100_1_24_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_1_1
+      - name: canvasTest100_2_25_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_1_1
+            - name: canvasTest100_1_25_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_2_1
+      - name: canvasTest100_3_1_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_2_1
+            - name: canvasTest100_2_1_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_3_1
+      - name: canvasTest100_3_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_3_1
+            - name: canvasTest100_2_2_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_4_1
+      - name: canvasTest100_3_3_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_4_1
+            - name: canvasTest100_2_3_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_5_1
+      - name: canvasTest100_3_4_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_5_1
+            - name: canvasTest100_2_4_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_6_1
+      - name: canvasTest100_3_5_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_6_1
+            - name: canvasTest100_2_5_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_7_1
+      - name: canvasTest100_3_6_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_7_1
+            - name: canvasTest100_2_6_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_8_1
+      - name: canvasTest100_3_7_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_8_1
+            - name: canvasTest100_2_7_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_9_1
+      - name: canvasTest100_3_8_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_9_1
+            - name: canvasTest100_2_8_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_10_1
+      - name: canvasTest100_3_9_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_10_1
+            - name: canvasTest100_2_9_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_11_1
+      - name: canvasTest100_3_10_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_11_1
+            - name: canvasTest100_2_10_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_12_1
+      - name: canvasTest100_3_11_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_12_1
+            - name: canvasTest100_2_11_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_13_1
+      - name: canvasTest100_3_12_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_13_1
+            - name: canvasTest100_2_12_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_14_1
+      - name: canvasTest100_3_13_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_14_1
+            - name: canvasTest100_2_13_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_15_1
+      - name: canvasTest100_3_14_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_15_1
+            - name: canvasTest100_2_14_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_16_1
+      - name: canvasTest100_3_15_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_16_1
+            - name: canvasTest100_2_15_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_17_1
+      - name: canvasTest100_3_16_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_17_1
+            - name: canvasTest100_2_16_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_18_1
+      - name: canvasTest100_3_17_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_18_1
+            - name: canvasTest100_2_17_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_19_1
+      - name: canvasTest100_3_18_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_19_1
+            - name: canvasTest100_2_18_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_20_1
+      - name: canvasTest100_3_19_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_20_1
+            - name: canvasTest100_2_19_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_21_1
+      - name: canvasTest100_3_20_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_21_1
+            - name: canvasTest100_2_20_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_22_1
+      - name: canvasTest100_3_21_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_22_1
+            - name: canvasTest100_2_21_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_23_1
+      - name: canvasTest100_3_22_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_23_1
+            - name: canvasTest100_2_22_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_24_1
+      - name: canvasTest100_3_23_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_24_1
+            - name: canvasTest100_2_23_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_3_25_1
+      - name: canvasTest100_3_24_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_2_25_1
+            - name: canvasTest100_2_24_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_1_1
+      - name: canvasTest100_3_25_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_1_1
+            - name: canvasTest100_2_25_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_2_1
+      - name: canvasTest100_4_1_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_2_1
+            - name: canvasTest100_3_1_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_3_1
+      - name: canvasTest100_4_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_3_1
+            - name: canvasTest100_3_2_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_4_1
+      - name: canvasTest100_4_3_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_4_1
+            - name: canvasTest100_3_3_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_5_1
+      - name: canvasTest100_4_4_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_5_1
+            - name: canvasTest100_3_4_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_6_1
+      - name: canvasTest100_4_5_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_6_1
+            - name: canvasTest100_3_5_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_7_1
+      - name: canvasTest100_4_6_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_7_1
+            - name: canvasTest100_3_6_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_8_1
+      - name: canvasTest100_4_7_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_8_1
+            - name: canvasTest100_3_7_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_9_1
+      - name: canvasTest100_4_8_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_9_1
+            - name: canvasTest100_3_8_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_10_1
+      - name: canvasTest100_4_9_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_10_1
+            - name: canvasTest100_3_9_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_11_1
+      - name: canvasTest100_4_10_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_11_1
+            - name: canvasTest100_3_10_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_12_1
+      - name: canvasTest100_4_11_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_12_1
+            - name: canvasTest100_3_11_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_13_1
+      - name: canvasTest100_4_12_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_13_1
+            - name: canvasTest100_3_12_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_14_1
+      - name: canvasTest100_4_13_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_14_1
+            - name: canvasTest100_3_13_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_15_1
+      - name: canvasTest100_4_14_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_15_1
+            - name: canvasTest100_3_14_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_16_1
+      - name: canvasTest100_4_15_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_16_1
+            - name: canvasTest100_3_15_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_17_1
+      - name: canvasTest100_4_16_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_17_1
+            - name: canvasTest100_3_16_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_18_1
+      - name: canvasTest100_4_17_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_18_1
+            - name: canvasTest100_3_17_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_19_1
+      - name: canvasTest100_4_18_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_19_1
+            - name: canvasTest100_3_18_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_20_1
+      - name: canvasTest100_4_19_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_20_1
+            - name: canvasTest100_3_19_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_21_1
+      - name: canvasTest100_4_20_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_21_1
+            - name: canvasTest100_3_20_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_22_1
+      - name: canvasTest100_4_21_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_22_1
+            - name: canvasTest100_3_21_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_23_1
+      - name: canvasTest100_4_22_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_23_1
+            - name: canvasTest100_3_22_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_24_1
+      - name: canvasTest100_4_23_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_24_1
+            - name: canvasTest100_3_23_1
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest500_4_25_1
+      - name: canvasTest100_4_24_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas500
+            - name: propertyCanvas100
             - name: buildInfoTrigger500
           inputSteps:
-            - name: canvasTest500_3_25_1
+            - name: canvasTest100_3_24_1
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest100_4_25_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas100
+            - name: buildInfoTrigger500
+          inputSteps:
+            - name: canvasTest100_3_25_1
         execution:
           onExecute:
             - sleep 1
