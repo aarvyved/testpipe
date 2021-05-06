@@ -1,11 +1,11 @@
 
 resources:
-  - name: propertyCanvas10-1
+  - name: propertyCanvas10a
     type: PropertyBag
     configuration:
       key1: value1
       key2: value2
-  - name: buildInfoTrigger10-1
+  - name: buildInfoTrigger10a
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtIntegration
@@ -14,11 +14,11 @@ resources:
 pipelines:
   - name: canvasTest10-1
     steps:
-      - name: canvasTest_Root10
+      - name: canvasTest_Root10a
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
         execution:
           onExecute:
             - sleep 1
@@ -27,9 +27,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -38,9 +38,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -49,9 +49,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -60,9 +60,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -71,9 +71,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -82,9 +82,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -93,9 +93,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -104,9 +104,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -115,9 +115,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
@@ -126,9 +126,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10-1
+            - name: propertyCanvas10a
           inputSteps:
-            - name: canvasTest_Root10
+            - name: canvasTest_Root10a
         execution:
           onExecute:
             - sleep 1
