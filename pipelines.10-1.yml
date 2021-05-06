@@ -1,24 +1,24 @@
 
 resources:
-  - name: propertyCanvas10
+  - name: propertyCanvas10-1
     type: PropertyBag
     configuration:
       key1: value1
       key2: value2
-  - name: buildInfoTrigger10
+  - name: buildInfoTrigger10-1
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtIntegration
       buildName: backend_build
       buildNumber: 1
 pipelines:
-  - name: canvasTest10
+  - name: canvasTest10-1
     steps:
       - name: canvasTest_Root10
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
         execution:
           onExecute:
             - sleep 1
@@ -27,7 +27,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -38,7 +38,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -49,7 +49,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -60,7 +60,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -71,7 +71,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -82,7 +82,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -93,7 +93,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -104,7 +104,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -115,7 +115,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -126,7 +126,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas10-1
           inputSteps:
             - name: canvasTest_Root10
         execution:
