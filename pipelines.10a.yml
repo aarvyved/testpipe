@@ -12,7 +12,7 @@ resources:
       buildName: backend_build
       buildNumber: 1
 pipelines:
-  - name: canvasTest10-1
+  - name: canvasTest10a
     steps:
       - name: canvasTest_Root10a
         type: Bash
