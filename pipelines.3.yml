@@ -1,6 +1,6 @@
 
 resources:
-  - name: propertyCanvas10
+  - name: propertyCanvas3
     type: PropertyBag
     configuration:
       key1: value1
@@ -12,35 +12,23 @@ resources:
       buildName: backend_build
       buildNumber: 1
 pipelines:
-  - name: canvasTest10
+  - name: canvasTest3
     steps:
       - name: canvasTest_Root10
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas3
             - name: buildInfoTrigger3
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest10_1_1_1
+      - name: Test3_1_1_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger3
-          inputSteps:
-            - name: canvasTest_Root10
-        execution:
-          onExecute:
-            - sleep 1
-            - echo "done"
-      - name: canvasTest10_1_2_1
-        type: Bash
-        configuration:
-          inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas3
             - name: buildInfoTrigger3
           inputSteps:
             - name: canvasTest_Root10
@@ -48,11 +36,23 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: canvasTest10_1_3_1
+      - name: Test3_1_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test3_1_3_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas3
             - name: buildInfoTrigger3
           inputSteps:
             - name: canvasTest_Root10
