@@ -1,63 +1,64 @@
 
 resources:
-  - name: property10
+  - name: propertyCanvas10
     type: PropertyBag
     configuration:
       key1: value1
       key2: value2
-  - name: buildInfoTrigger10
+  - name: buildInfoTrigger3
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtIntegration
       buildName: backend_build
       buildNumber: 1
 pipelines:
-  - name: Test10
+  - name: canvasTest10
     steps:
-      - name: Test_Root10
+      - name: canvasTest_Root10
         type: Bash
         configuration:
           inputResources:
-            - name: property10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10
+            - name: buildInfoTrigger3
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: Test10_1_1_1
+      - name: canvasTest10_1_1_1
         type: Bash
         configuration:
           inputResources:
-            - name: property10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10
+            - name: buildInfoTrigger3
           inputSteps:
-            - name: Test_Root10
+            - name: canvasTest_Root10
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: Test10_1_2_1
+      - name: canvasTest10_1_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: property10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10
+            - name: buildInfoTrigger3
           inputSteps:
-            - name: Test_Root10
+            - name: canvasTest_Root10
         execution:
           onExecute:
             - sleep 1
             - echo "done"
-      - name: Test10_1_3_1
+      - name: canvasTest10_1_3_1
         type: Bash
         configuration:
           inputResources:
-            - name: property10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10
+            - name: buildInfoTrigger3
           inputSteps:
-            - name: Test_Root10
+            - name: canvasTest_Root10
         execution:
           onExecute:
             - sleep 1
             - echo "done"
+
       
