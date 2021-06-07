@@ -1,0 +1,63 @@
+
+resources:
+  - name: property10
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: buildInfoTrigger10
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtIntegration
+      buildName: backend_build
+      buildNumber: 1
+pipelines:
+  - name: Test10
+    steps:
+      - name: Test_Root10
+        type: Bash
+        configuration:
+          inputResources:
+            - name: property10
+            - name: buildInfoTrigger10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test10_1_1_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: property10
+            - name: buildInfoTrigger10
+          inputSteps:
+            - name: Test_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test10_1_2_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: property10
+            - name: buildInfoTrigger10
+          inputSteps:
+            - name: Test_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test10_1_3_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: property10
+            - name: buildInfoTrigger10
+          inputSteps:
+            - name: Test_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      
