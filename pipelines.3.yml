@@ -60,5 +60,29 @@ pipelines:
           onExecute:
             - sleep 1
             - echo "done"
+      - name: Test3_1_4_1
+        type: Bash
+        configuration:
+            inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+            inputSteps:
+            - name: canvasTest_Root10
+        execution:
+            onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test3_1_5_1
+        type: Bash
+        configuration:
+            inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+            inputSteps:
+            - name: canvasTest_Root10
+        execution:
+            onExecute:
+            - sleep 1
+            - echo "done"
 
       
