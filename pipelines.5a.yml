@@ -51,6 +51,7 @@ pipelines:
       - name: Test3_1_3_1
         type: Bash
         configuration:
+          affinityGroup: together
           inputResources:
             - name: propertyCanvas3
             - name: buildInfoTrigger3
@@ -75,6 +76,7 @@ pipelines:
       - name: Test3_1_5_1
         type: Bash
         configuration:
+            affinityGroup: together
             inputResources:
             - name: propertyCanvas3
             - name: buildInfoTrigger3
