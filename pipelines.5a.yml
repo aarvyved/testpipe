@@ -12,11 +12,12 @@ resources:
       buildName: backend_build
       buildNumber: 1
 pipelines:
-  - name: canvasTest3
+  - name: canvasTest5
     steps:
       - name: canvasTest_Root10
         type: Bash
         configuration:
+          affinityGroup: together
           inputResources:
             - name: propertyCanvas3
             - name: buildInfoTrigger3
