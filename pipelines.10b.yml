@@ -1,11 +1,11 @@
 
 resources:
-  - name: propertyCanvas10
+  - name: propertyCanvas10b
     type: PropertyBag
     configuration:
       key1: value1
       key2: value2
-  - name: buildInfoTrigger10
+  - name: buildInfoTrigger10b
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtIntegration
@@ -18,8 +18,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
         execution:
           onExecute:
             - sleep 1
@@ -28,8 +28,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -40,8 +40,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -52,8 +52,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -64,8 +64,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -76,8 +76,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -89,8 +89,8 @@ pipelines:
         configuration:
           affinityGroup: groupa
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -102,8 +102,8 @@ pipelines:
         configuration:
           affinityGroup: groupb
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -115,8 +115,8 @@ pipelines:
         configuration:
           affinityGroup: groupa
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -128,8 +128,8 @@ pipelines:
         configuration:
           affinityGroup: groupb
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
@@ -140,8 +140,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: propertyCanvas10
-            - name: buildInfoTrigger10
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
             - name: canvasTest_Root10
         execution:
