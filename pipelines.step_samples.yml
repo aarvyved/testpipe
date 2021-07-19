@@ -2,8 +2,8 @@ resources:
   - name: appRepo
     type: GitRepo
     configuration:
-      gitProvider:  GitIntegration
-      path:         aarvyved/testpipe
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
       branches:
         include: ^main$
         
@@ -30,7 +30,7 @@ pipelines:
           resolverRepo: gocenter-remote
           outputFile: app
           integrations:
-            - name: art
+            - name: ArtIntegration
           inputResources:
             - name: appRepo
 
@@ -63,7 +63,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: art
+            - name: ArtIntegration
           inputResources:
             - name: promotedBuildInfo
         execution:
