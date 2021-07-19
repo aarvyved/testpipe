@@ -1,0 +1,75 @@
+resources:
+  - name: appRepo
+    type: GitRepo
+    configuration:
+      gitProvider:  GitIntegration
+      path:         aarvyved/testpipe
+      branches:
+        include: ^master$
+        
+  - name: basicBuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: art
+
+  - name: promotedBuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtIntegration
+
+pipelines:
+  - name: dev_pipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          JFROG_CLI_BUILD_NAME: go_app
+    steps:
+      - name: build_app
+        type: GoBuild
+        configuration:
+          resolverRepo: gocenter-remote
+          outputFile: app
+          integrations:
+            - name: art
+          inputResources:
+            - name: appRepo
+
+      - name: publish_app
+        type: GoPublishBinary
+        configuration:
+          autoPublishBuildInfo: true
+          targetRepository: dev-go-local
+          inputSteps:
+            - name: build_app
+          outputResources:
+            - name: basicBuildInfo
+
+  - name: prod_pipeline
+    steps:
+      - name: promote_app
+        type: PromoteBuild
+        configuration:
+          failOnValidate: true
+          copy: true
+          targetRepository: prod-go-local
+          comment: "promoted via pipeline ${pipeline_name} in run number ${run_number}"
+          inputResources:
+            - name: basicBuildInfo
+              trigger: false
+          outputResources:
+            - name: promotedBuildInfo
+
+      - name: deploy_app
+        type: Bash
+        configuration:
+          integrations:
+            - name: art
+          inputResources:
+            - name: promotedBuildInfo
+        execution:
+          onStart:
+            - jfrog rt dl prod-go-local/app
+            - ls -latr
+          onExecute:
+            - chmod +x app
+            - ./app
