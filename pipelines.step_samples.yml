@@ -5,12 +5,12 @@ resources:
       gitProvider:  GitIntegration
       path:         aarvyved/testpipe
       branches:
-        include: ^master$
+        include: ^main$
         
   - name: basicBuildInfo
     type: BuildInfo
     configuration:
-      sourceArtifactory: art
+      sourceArtifactory: ArtIntegration
 
   - name: promotedBuildInfo
     type: BuildInfo
