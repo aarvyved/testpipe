@@ -38,6 +38,7 @@ pipelines:
         execution:
           onExecute:
             - sleep 1
+            - add_run_variables testKey2="testValue2"
             - echo "done"
       - name: Test3_1_2_1
         type: Bash
