@@ -18,6 +18,10 @@ pipelines:
         type: Bash
         configuration:
           affinityGroup: together
+          environmentVariables:
+            readOnly:
+              pipeenv1: value1
+              pipeenv2: value2
           inputResources:
             - name: propertyCanvas3
             - name: buildInfoTrigger3
