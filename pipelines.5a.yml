@@ -13,15 +13,18 @@ resources:
       buildNumber: 1
 pipelines:
   - name: canvasTest5
+    configuration:
+      environmentVariables:
+        pipeenv1: value1
+        pipeenv2: value2
     steps:
       - name: canvasTest_Root10
         type: Bash
         configuration:
           affinityGroup: together
           environmentVariables:
-            readOnly:
-              pipeenv1: value1
-              pipeenv2: value2
+            stepenv1: value1
+            stepenv2: value2
           inputResources:
             - name: propertyCanvas3
             - name: buildInfoTrigger3
