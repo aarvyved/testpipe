@@ -15,8 +15,11 @@ pipelines:
   - name: canvasTest5
     configuration:
       environmentVariables:
-        pipeenv1: value1
-        pipeenv2: value2
+        readOnly:
+          pipeenv1:
+            default:  value1
+          pipeenv2:
+            default:  value2
     steps:
       - name: canvasTest_Root10
         type: Bash
