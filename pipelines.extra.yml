@@ -11,7 +11,6 @@ pipelines:
       - name: powershell_step
         type: PowerShell
         configuration:
-          nodePool: win_2019
           inputSteps:
             - name: bash_step
         execution:
