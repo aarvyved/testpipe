@@ -8,8 +8,8 @@ resources:
         include: main
 
 
-pipelines: testReports
-  - name: 
+pipelines:
+  - name: testReports
     steps:
       - name: step_with_tests
         type: Bash
