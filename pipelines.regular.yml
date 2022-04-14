@@ -173,6 +173,7 @@ pipelines:
         execution:
           onExecute:
             - sleep 5
+            - echo $steplet_id
             - echo "done"
   - name: resourcesPipeline
     steps:
