@@ -178,7 +178,7 @@ pipelines:
       - name: step2
         type: Bash
         configuration:
-        inputSteps:
+          inputSteps:
             - name: step1
         execution:
           onExecute:
