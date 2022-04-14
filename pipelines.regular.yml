@@ -175,6 +175,15 @@ pipelines:
             - sleep 5
             - echo $steplet_id
             - echo "done"
+      - name: step2
+        type: Bash
+        configuration:
+        inputSteps:
+            - name: step1
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
   - name: resourcesPipeline
     steps:
       - name: step1
