@@ -13,6 +13,10 @@ resources:
       buildNumber: 1
 pipelines:
   - name: canvasTest10b
+    environmentVariables:
+        readOnly:
+          pipeLevel1: pipeValue1
+          pipeLevel2: pipeValue2
     steps:
       - name: canvasTest_Root10
         type: Bash
@@ -27,6 +31,9 @@ pipelines:
       - name: canvasTest10_1_1_1
         type: Bash
         configuration:
+          environmentVariables:
+            stepLevel1: stepValue1
+            stepLevel2: stepValue2
           inputResources:
             - name: propertyCanvas10b
             - name: buildInfoTrigger10b
