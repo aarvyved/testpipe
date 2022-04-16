@@ -13,7 +13,8 @@ resources:
       buildNumber: 1
 pipelines:
   - name: canvasTest10b
-    environmentVariables:
+    configuration:
+      environmentVariables:
         readOnly:
           pipeLevel1: pipeValue1
           pipeLevel2: pipeValue2
