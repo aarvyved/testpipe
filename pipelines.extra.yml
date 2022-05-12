@@ -1,3 +1,50 @@
+
+resources:
+  - name: prop1
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: git
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_IN
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_SANDWICH
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_OUT_1
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_OUT_2
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_OUT_3
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_OUT_4
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
+  - name: git_OUT_5
+    type: GitRepo
+    configuration:
+      gitProvider: GitIntegration
+      path: aarvyved/testpipe
 pipelines:
   - name: bash_and_powershell_basic
     steps:
@@ -17,3 +64,75 @@ pipelines:
           onExecute:
             - write-output "Hi !!"
             - docker images
+  - name: IN
+    steps:
+      - name: IN_TEST
+        type: Bash
+        configuration:
+          outputResources:
+            - name: git_IN
+            - name: git_SANDWICH
+          inputResources:
+            - name: git
+        execution:
+            onExecute:
+              - sleep 10
+              - echo "done"
+      - name: IN_TEST_OUT
+        type: Bash
+        configuration:
+          inputResources:
+            - name: git_SANDWICH
+              trigger: false
+          inputSteps:
+            - name: IN_TEST
+          outputResources:
+            - name: git_OUT_5
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: trigger
+        type: Bash
+        configuration:
+          inputResources:
+            - name: git_OUT_5
+          outputResources:
+            - name: git_OUT_1
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: trigger_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: git_OUT_1
+          outputResources:
+            - name: git_OUT_2
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: trigger_2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: git_OUT_2
+          outputResources:
+            - name: git_OUT_3
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+      - name: trigger_3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: git_OUT_3
+          outputResources:
+            - name: git_OUT_4
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
