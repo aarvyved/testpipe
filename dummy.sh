@@ -1,1 +1,1 @@
-main dummy once
+main dummy dummy
