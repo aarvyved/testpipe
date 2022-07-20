@@ -38,7 +38,16 @@ pipelines:
         execution:
           onExecute:
             - save_tests "$res_A_6805_0001_GitRepo_resourcePath/tests/junit/v3_example_2.xml"
-      
+      - name: step_with_tests_3
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step_with_tests_2
+          inputResources:
+            - name: A_6805_0001_GitRepo
+        execution:
+          onExecute:
+            - save_tests "$res_A_6805_0001_GitRepo_resourcePath/tests/junit/tr21.xml"
       - name: matrix_step
         type: Matrix
         stepletMultipliers:
@@ -49,7 +58,7 @@ pipelines:
               file_name: v3_example_2.xml
         configuration:
           inputSteps:
-            - name: step_with_tests_2
+            - name: step_with_tests_3
           inputResources:
             - name: A_6805_0001_GitRepo
         execution:
