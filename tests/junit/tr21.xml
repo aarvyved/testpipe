@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites class="Mocha Tests" time="143.3200" tests="96" failures="0">
+  <testsuite class="Root Suite" timestamp="2022-01-17T17:51:36" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite class="API_STEPVARIABLES - StepVariables API tests" timestamp="2022-01-17T17:51:36" tests="0" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite class="POST /stepVariables test cases" timestamp="2022-01-17T17:53:55" tests="23" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.6660" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-001. Superuser should be able to post stepVariables." time="0.0810" classclass="A-StepVariables-6379-001. Superuser should be able to post stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-002. Admin user shouldn&apos;t be able to post stepVariables." time="0.0420" classclass="A-StepVariables-6379-002. Admin user shouldn&apos;t be able to post stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-003. Member user shouldn&apos;t be able to post stepVariables." time="0.0510" classclass="A-StepVariables-6379-003. Member user shouldn&apos;t be able to post stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-004. Public user shouldn&apos;t be able to post stepVariables." time="0.0210" classclass="A-StepVariables-6379-004. Public user shouldn&apos;t be able to post stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-005. User shouldn&apos;t be able to post stepVariables without stepletId field." time="0.0270" classclass="A-StepVariables-6379-005. User shouldn&apos;t be able to post stepVariables without stepletId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-006. User shouldn&apos;t be able to post stepVariables with an invalid stepletId." time="0.0360" classclass="A-StepVariables-6379-006. User shouldn&apos;t be able to post stepVariables with an invalid stepletId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-007. User shouldn&apos;t be able to post stepVariables with variables containing an unrecognized key (not runVariables)." time="0.0230" classclass="A-StepVariables-6379-007. User shouldn&apos;t be able to post stepVariables with variables containing an unrecognized key (not runVariables).">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-008. User shouldn&apos;t be able to post stepVariables with a non-Array runVariables." time="0.0630" classclass="A-StepVariables-6379-008. User shouldn&apos;t be able to post stepVariables with a non-Array runVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-009. User shouldn&apos;t be able to post stepVariables with an item in runVariables missing a value." time="0.0200" classclass="A-StepVariables-6379-009. User shouldn&apos;t be able to post stepVariables with an item in runVariables missing a value.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-010. User shouldn&apos;t be able to post stepVariables with an item in runVariables missing a key." time="0.0240" classclass="A-StepVariables-6379-010. User shouldn&apos;t be able to post stepVariables with an item in runVariables missing a key.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-011. User shouldn&apos;t be able to post stepVariables with an item in runVariables with an extra property." time="0.0210" classclass="A-StepVariables-6379-011. User shouldn&apos;t be able to post stepVariables with an item in runVariables with an extra property.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-012. User shouldn&apos;t be able to post stepVariables with a runVariable with an empty key." time="0.0240" classclass="A-StepVariables-6379-012. User shouldn&apos;t be able to post stepVariables with a runVariable with an empty key.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-013. User should be able to post stepVariables with a runVariable with an empty value." time="0.1130" classclass="A-StepVariables-6379-013. User should be able to post stepVariables with a runVariable with an empty value.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-014. The response body of the stepVariables post API should contain id field, which should be an integer." time="0.0010" classclass="A-StepVariables-6379-014. The response body of the stepVariables post API should contain id field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-015. The response body of the stepVariables post API should contain stepletId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-015. The response body of the stepVariables post API should contain stepletId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-016. The response body of the stepVariables post API should contain stepId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-016. The response body of the stepVariables post API should contain stepId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-017. The response body of the stepVariables post API should contain runId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-017. The response body of the stepVariables post API should contain runId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-018. The response body of the stepVariables post API should contain pipelineId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-018. The response body of the stepVariables post API should contain pipelineId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-019. The response body of the stepVariables post API should contain pipelineSourceId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-019. The response body of the stepVariables post API should contain pipelineSourceId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-020. The response body of the stepVariables post API should contain projectId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-020. The response body of the stepVariables post API should contain projectId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-021. The response body of the stepVariables post API should contain variables." time="0.0010" classclass="A-StepVariables-6379-021. The response body of the stepVariables post API should contain variables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-022. The response body of the stepVariables post API should contain createdAt field, which should not be null." time="0.0010" classclass="A-StepVariables-6379-022. The response body of the stepVariables post API should contain createdAt field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests POST /stepVariables test cases A-StepVariables-6379-023. The response body of the stepVariables post API should contain updatedAt field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-023. The response body of the stepVariables post API should contain updatedAt field, which should not be null.">
+    </testcase>
+  </testsuite>
+  <testsuite class="GET /stepVariables/:stepVariableId test cases" timestamp="2022-01-17T17:53:56" tests="14" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.5870" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-024. Super user should be able to get stepVariables by ID." time="0.0270" classclass="A-StepVariables-6379-024. Super user should be able to get stepVariables by ID.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-025. Admin user should be able to get stepVariables by ID." time="0.2140" classclass="A-StepVariables-6379-025. Admin user should be able to get stepVariables by ID.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-026. Member user should be able to get stepVariables by ID." time="0.2920" classclass="A-StepVariables-6379-026. Member user should be able to get stepVariables by ID.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-027. Public user shouldn&apos;t be able to get stepVariables by ID." time="0.0190" classclass="A-StepVariables-6379-027. Public user shouldn&apos;t be able to get stepVariables by ID.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-028. The response body of the getById call for stepVariables should contain an id field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-028. The response body of the getById call for stepVariables should contain an id field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-029. The response body of the getById call for stepVariables should contain a stepletId field, which should be an integer." time="0.0010" classclass="A-StepVariables-6379-029. The response body of the getById call for stepVariables should contain a stepletId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-030. The response body of the getById call for stepVariables should contain a stepId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-030. The response body of the getById call for stepVariables should contain a stepId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-031. The response body of the getById call for stepVariables should contain a runId field, which should be an integer." time="0.0010" classclass="A-StepVariables-6379-031. The response body of the getById call for stepVariables should contain a runId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-032. The response body of the getById call for stepVariables should contain a pipelineId field." time="0.0000" classclass="A-StepVariables-6379-032. The response body of the getById call for stepVariables should contain a pipelineId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-033. The response body of the getById call for stepVariables should contain a pipelineSourceId field." time="0.0000" classclass="A-StepVariables-6379-033. The response body of the getById call for stepVariables should contain a pipelineSourceId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-034. The response body of the getById call for stepVariables should contain a projectId field." time="0.0000" classclass="A-StepVariables-6379-034. The response body of the getById call for stepVariables should contain a projectId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-035. The response body of the getById call for stepVariables should contain a variables field." time="0.0000" classclass="A-StepVariables-6379-035. The response body of the getById call for stepVariables should contain a variables field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-036. The response body of the getById call for stepVariables should contain a createdAt field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-036. The response body of the getById call for stepVariables should contain a createdAt field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables/:stepVariableId test cases A-StepVariables-6379-037. The response body of the getById call for stepVariables should contain an updatedAt field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-037. The response body of the getById call for stepVariables should contain an updatedAt field, which should not be null.">
+    </testcase>
+  </testsuite>
+  <testsuite class="GET /stepVariables test cases" timestamp="2022-01-17T17:53:56" tests="22" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.4470" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-038. Super user should be able to get stepVariables with queries." time="0.0720" classclass="A-StepVariables-6379-038. Super user should be able to get stepVariables with queries.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-039. Admin user should be able to get stepVariables with queries." time="0.0610" classclass="A-StepVariables-6379-039. Admin user should be able to get stepVariables with queries.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-040. Member user should be able to get stepVariables with queries." time="0.0650" classclass="A-StepVariables-6379-040. Member user should be able to get stepVariables with queries.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-041. Public user shouldn&apos;t be able to get stepVariables with queries." time="0.0160" classclass="A-StepVariables-6379-041. Public user shouldn&apos;t be able to get stepVariables with queries.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-042. The stepVariables getS API should support stepVariableIds in the querystring." time="0.0480" classclass="A-StepVariables-6379-042. The stepVariables getS API should support stepVariableIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-043. The stepVariables getS API should support stepletIds in the querystring." time="0.0260" classclass="A-StepVariables-6379-043. The stepVariables getS API should support stepletIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-044. The stepVariables getS API should support stepIds in the querystring." time="0.0240" classclass="A-StepVariables-6379-044. The stepVariables getS API should support stepIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-045. The stepVariables getS API should support runIds in the querystring." time="0.0310" classclass="A-StepVariables-6379-045. The stepVariables getS API should support runIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-046. The stepVariables getS API should support pipelineIds in the querystring." time="0.0250" classclass="A-StepVariables-6379-046. The stepVariables getS API should support pipelineIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-047. The stepVariables getS API should support pipelineSourceIds in the querystring." time="0.0280" classclass="A-StepVariables-6379-047. The stepVariables getS API should support pipelineSourceIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-048. The stepVariables getS API should support projectIds in the querystring." time="0.0380" classclass="A-StepVariables-6379-048. The stepVariables getS API should support projectIds in the querystring.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-049. The response body of the getS call on stepVariables API should contain an array of stepVariables." time="0.0000" classclass="A-StepVariables-6379-049. The response body of the getS call on stepVariables API should contain an array of stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-050. The stepVariables returned by a getS call on stepVariables API should contain id field, which should not be null." time="0.0010" classclass="A-StepVariables-6379-050. The stepVariables returned by a getS call on stepVariables API should contain id field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-051. The stepVariables returned by a getS call on stepVariables API should contain stepletId field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-051. The stepVariables returned by a getS call on stepVariables API should contain stepletId field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-052. The stepVariables returned by a getS call on stepVariables API should contain stepId field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-052. The stepVariables returned by a getS call on stepVariables API should contain stepId field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-053. The stepVariables returned by a getS call on stepVariables API should contain runId field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-053. The stepVariables returned by a getS call on stepVariables API should contain runId field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-054. The stepVariables returned by a getS call on stepVariables API should contain pipelineId field." time="0.0010" classclass="A-StepVariables-6379-054. The stepVariables returned by a getS call on stepVariables API should contain pipelineId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-055. The stepVariables returned by a getS call on stepVariables API should contain pipelineSourceId field." time="0.0000" classclass="A-StepVariables-6379-055. The stepVariables returned by a getS call on stepVariables API should contain pipelineSourceId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-056. The stepVariables returned by a getS call on stepVariables API should contain projectId field." time="0.0010" classclass="A-StepVariables-6379-056. The stepVariables returned by a getS call on stepVariables API should contain projectId field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-057. The stepVariables returned by a getS call on stepVariables API should contain variables field." time="0.0000" classclass="A-StepVariables-6379-057. The stepVariables returned by a getS call on stepVariables API should contain variables field.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-058. The stepVariables returned by a getS call on stepVariables API should contain createdAt field, which should not be null." time="0.0010" classclass="A-StepVariables-6379-058. The stepVariables returned by a getS call on stepVariables API should contain createdAt field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests GET /stepVariables test cases A-StepVariables-6379-059. The stepVariables returned by a getS call on stepVariables API should contain updatedAt field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-059. The stepVariables returned by a getS call on stepVariables API should contain updatedAt field, which should not be null.">
+    </testcase>
+  </testsuite>
+  <testsuite class="PUT /stepVariables/:stepVariableId test cases" timestamp="2022-01-17T17:53:57" tests="22" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.3490" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-060. Superuser should be able to put stepVariables." time="0.0270" classclass="A-StepVariables-6379-060. Superuser should be able to put stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-061. Admin user shouldn&apos;t be able to put stepVariables." time="0.0310" classclass="A-StepVariables-6379-061. Admin user shouldn&apos;t be able to put stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-062. Member user shouldn&apos;t be able to put stepVariables." time="0.0310" classclass="A-StepVariables-6379-062. Member user shouldn&apos;t be able to put stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-063. Public user shouldn&apos;t be able to put stepVariables." time="0.0190" classclass="A-StepVariables-6379-063. Public user shouldn&apos;t be able to put stepVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-064. User shouldn&apos;t be able to put stepVariables with an invalid id." time="0.0340" classclass="A-StepVariables-6379-064. User shouldn&apos;t be able to put stepVariables with an invalid id.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-065. User shouldn&apos;t be able to put stepVariables with variables containing an unrecognized key (not runVariables)." time="0.0240" classclass="A-StepVariables-6379-065. User shouldn&apos;t be able to put stepVariables with variables containing an unrecognized key (not runVariables).">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-066. User shouldn&apos;t be able to put stepVariables with a non-Array runVariables." time="0.0230" classclass="A-StepVariables-6379-066. User shouldn&apos;t be able to put stepVariables with a non-Array runVariables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-067. User shouldn&apos;t be able to put stepVariables with an item in runVariables missing a value." time="0.0210" classclass="A-StepVariables-6379-067. User shouldn&apos;t be able to put stepVariables with an item in runVariables missing a value.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-068. User shouldn&apos;t be able to put stepVariables with an item in runVariables missing a key." time="0.0270" classclass="A-StepVariables-6379-068. User shouldn&apos;t be able to put stepVariables with an item in runVariables missing a key.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-069. User shouldn&apos;t be able to put stepVariables with an item in runVariables with an extra property." time="0.0210" classclass="A-StepVariables-6379-069. User shouldn&apos;t be able to put stepVariables with an item in runVariables with an extra property.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-070. User shouldn&apos;t be able to put stepVariables with a runVariable with an empty key." time="0.0200" classclass="A-StepVariables-6379-070. User shouldn&apos;t be able to put stepVariables with a runVariable with an empty key.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-071. User should be able to put stepVariables with a runVariable with an empty value." time="0.0360" classclass="A-StepVariables-6379-071. User should be able to put stepVariables with a runVariable with an empty value.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-072. The response body of the stepVariables put API should contain id field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-072. The response body of the stepVariables put API should contain id field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-073. The response body of the stepVariables put API should contain stepletId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-073. The response body of the stepVariables put API should contain stepletId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-074. The response body of the stepVariables put API should contain stepId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-074. The response body of the stepVariables put API should contain stepId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-075. The response body of the stepVariables put API should contain runId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-075. The response body of the stepVariables put API should contain runId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-076. The response body of the stepVariables put API should contain pipelineId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-076. The response body of the stepVariables put API should contain pipelineId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-077. The response body of the stepVariables put API should contain pipelineSourceId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-077. The response body of the stepVariables put API should contain pipelineSourceId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-078. The response body of the stepVariables put API should contain projectId field, which should be an integer." time="0.0000" classclass="A-StepVariables-6379-078. The response body of the stepVariables put API should contain projectId field, which should be an integer.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-079. The response body of the stepVariables put API should contain variables." time="0.0010" classclass="A-StepVariables-6379-079. The response body of the stepVariables put API should contain variables.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-080. The response body of the stepVariables put API should contain createdAt field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-080. The response body of the stepVariables put API should contain createdAt field, which should not be null.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests PUT /stepVariables/:stepVariableId test cases A-StepVariables-6379-081. The response body of the stepVariables put API should contain updatedAt field, which should not be null." time="0.0000" classclass="A-StepVariables-6379-081. The response body of the stepVariables put API should contain updatedAt field, which should not be null.">
+    </testcase>
+  </testsuite>
+  <testsuite class="DELETE /stepVariables/:stepVariableId test cases" timestamp="2022-01-17T17:53:57" tests="5" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.1390" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /stepVariables/:stepVariableId test cases A-StepVariables-6379-082. Public user shouldn&apos;t be able to delete stepVariables by stepVariableId." time="0.0200" classclass="A-StepVariables-6379-082. Public user shouldn&apos;t be able to delete stepVariables by stepVariableId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /stepVariables/:stepVariableId test cases A-StepVariables-6379-083. Member user shouldn&apos;t be able to delete stepVariables by stepVariableId." time="0.0360" classclass="A-StepVariables-6379-083. Member user shouldn&apos;t be able to delete stepVariables by stepVariableId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /stepVariables/:stepVariableId test cases A-StepVariables-6379-084. Admin user shouldn&apos;t be able to delete stepVariables by stepVariableId." time="0.0350" classclass="A-StepVariables-6379-084. Admin user shouldn&apos;t be able to delete stepVariables by stepVariableId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /stepVariables/:stepVariableId test cases A-StepVariables-6379-085. Superuser should be able to delete stepVariables by stepVariableId." time="0.0210" classclass="A-StepVariables-6379-085. Superuser should be able to delete stepVariables by stepVariableId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /stepVariables/:stepVariableId test cases A-StepVariables-6379-086. The response body of the stepVariables delete API call should contain an id field." time="0.0000" classclass="A-StepVariables-6379-086. The response body of the stepVariables delete API call should contain an id field.">
+    </testcase>
+  </testsuite>
+  <testsuite class="DELETE /steplets/:stepletId/stepVariables test cases" timestamp="2022-01-17T17:53:57" tests="5" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="0.1520" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /steplets/:stepletId/stepVariables test cases A-StepVariables-6379-092. Public user shouldn&apos;t be able to delete stepVariables for a steplet with stepletId." time="0.0180" classclass="A-StepVariables-6379-092. Public user shouldn&apos;t be able to delete stepVariables for a steplet with stepletId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /steplets/:stepletId/stepVariables test cases A-StepVariables-6379-093. Member user shouldn&apos;t be able to delete stepVariables for a steplet with stepletId." time="0.0330" classclass="A-StepVariables-6379-093. Member user shouldn&apos;t be able to delete stepVariables for a steplet with stepletId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /steplets/:stepletId/stepVariables test cases A-StepVariables-6379-094. Admin user shouldn&apos;t be able to delete stepVariables for a steplet with stepletId." time="0.0250" classclass="A-StepVariables-6379-094. Admin user shouldn&apos;t be able to delete stepVariables for a steplet with stepletId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /steplets/:stepletId/stepVariables test cases A-StepVariables-6379-095. Superuser should be able to delete stepVariables for a steplet with stepletId." time="0.0500" classclass="A-StepVariables-6379-095. Superuser should be able to delete stepVariables for a steplet with stepletId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /steplets/:stepletId/stepVariables test cases A-StepVariables-6379-096. The response body of the stepVariables deleteByStepletId API should be an object containing stepletId." time="0.0000" classclass="A-StepVariables-6379-096. The response body of the stepVariables deleteByStepletId API should be an object containing stepletId.">
+    </testcase>
+  </testsuite>
+  <testsuite class="DELETE /pipelines/:pipelineId/stepVariables test cases" timestamp="2022-01-17T17:53:57" tests="5" file="/var/opt/jfrog/pipelines/data/iTest/runs/521732/steps/API_tests_1/4383624/setup_PreMatrix/tests/core/api/stepVariables.js" time="2.1010" failures="0">
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /pipelines/:pipelineId/stepVariables test cases A-StepVariables-6379-087. Public user shouldn&apos;t be able to delete all stepVariables for a pipeline with pipelineId." time="0.0230" classclass="A-StepVariables-6379-087. Public user shouldn&apos;t be able to delete all stepVariables for a pipeline with pipelineId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /pipelines/:pipelineId/stepVariables test cases A-StepVariables-6379-088. Member user shouldn&apos;t be able to delete all stepVariables for a pipeline with pipelineId." time="0.0360" classclass="A-StepVariables-6379-088. Member user shouldn&apos;t be able to delete all stepVariables for a pipeline with pipelineId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /pipelines/:pipelineId/stepVariables test cases A-StepVariables-6379-089. Admin user shouldn&apos;t be able to delete all stepVariables for a pipeline with pipelineId." time="0.0300" classclass="A-StepVariables-6379-089. Admin user shouldn&apos;t be able to delete all stepVariables for a pipeline with pipelineId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /pipelines/:pipelineId/stepVariables test cases A-StepVariables-6379-090. Superuser should be able to delete all stepVariables for a pipeline with pipelineId." time="0.0580" classclass="A-StepVariables-6379-090. Superuser should be able to delete all stepVariables for a pipeline with pipelineId.">
+    </testcase>
+    <testcase class="API_STEPVARIABLES - StepVariables API tests DELETE /pipelines/:pipelineId/stepVariables test cases A-StepVariables-6379-091. The response body of the stepVariables deleteByPipelineId API should be an object containing pipelineId." time="0.0000" classclass="A-StepVariables-6379-091. The response body of the stepVariables deleteByPipelineId API should be an object containing pipelineId.">
+    </testcase>
+  </testsuite>
+</testsuites>
