@@ -1,0 +1,104 @@
+
+resources:
+  - name: propertyCanvas3
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
+  - name: buildInfoTrigger3
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtIntegration
+      buildName: backend_build
+      buildNumber: 1
+pipelines:
+  - name: canvasTest5
+    configuration:
+      environmentVariables:
+        readOnly:
+          pipeenv1:
+            default:  value1
+          pipeenv2:
+            default:  value2
+    steps:
+      - name: canvasTest_Root10
+        type: Bash
+        configuration:
+          affinityGroup: together
+          environmentVariables:
+            stepenv1: value1
+            stepenv2: value2
+          inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+        execution:
+          onStart:
+            - add_run_variables testKey="testValue"
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test3_1_1_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - add_run_variables testKey2="testValue2"
+            - echo "done"
+      - name: Test3_1_2_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test3_1_3_1
+        type: Bash
+        configuration:
+          affinityGroup: together
+          inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test3_1_4_1
+        type: Bash
+        configuration:
+            inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+            inputSteps:
+            - name: canvasTest_Root10
+        execution:
+            onExecute:
+            - sleep 1
+            - echo "done"
+      - name: Test3_1_5_1
+        type: Bash
+        configuration:
+            affinityGroup: together
+            inputResources:
+            - name: propertyCanvas3
+            - name: buildInfoTrigger3
+            inputSteps:
+            - name: canvasTest_Root10
+        execution:
+            onExecute:
+            - sleep 1
+            - echo "done"
+
+      
