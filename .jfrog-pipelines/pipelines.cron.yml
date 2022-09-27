@@ -1,0 +1,20 @@
+resources:
+  - name: cron_trigger
+    type: CronTrigger
+    configuration:
+      interval: '*/5 * * * *'     # Every 5 minutes
+      branches:
+       include: "^main.+$"
+ 
+pipelines:
+  - name: pipeline_scheduled_triggers
+    steps:
+      - name: step_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: cron_trigger
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "cron done"
