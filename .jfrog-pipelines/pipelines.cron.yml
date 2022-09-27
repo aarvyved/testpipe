@@ -2,7 +2,8 @@ resources:
   - name: cron_trigger
     type: CronTrigger
     configuration:
-      interval: '*/5 * * * *'     # Every 5 minutes
+#       interval: '*/5 * * * *'     # Every 5 minutes
+      interval: '0 10 * * *'     # Every 5 minutes
       branches:
        include: "^main.+$"
  
