@@ -1,0 +1,40 @@
+resources:
+  - name: dependencyModePropertyBag
+    type: PropertyBag
+    configuration:
+      runNumber: 0
+ 
+pipelines:
+  - name: B_waitOnChild
+    configuration:
+      dependencyMode:
+        waitOnChildComplete: true
+    steps: 
+      - name: updateProperties
+        type: Bash
+        configuration:
+          outputResources:
+            - name: dependencyModePropertyBag
+        execution:
+          onExecute:
+            - write_output dependencyModePropertyBag runNumber=${run_number}
+             
+  - name: B_Child
+    steps: 
+      - name: echoProperty
+        type: Bash
+        configuration:
+          inputResources:
+            - name: dependencyModePropertyBag
+        execution:
+          onExecute:
+            - echo ${res_dependencyModePropertyBag_runNumber}
+            - sleep 5
+      - name: echoComplete
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: echoProperty
+        execution:
+          onExecute:
+            - echo "complete"
