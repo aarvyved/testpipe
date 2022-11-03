@@ -1,210 +1,159 @@
+
 resources:
-  - name:   in1
-    type:   GitRepo
+  - name: propertyCanvas10b
+    type: PropertyBag
     configuration:
-      gitProvider:  GitIntegration
-      path:         aarvyved/testpipe
-      buildOn:
-        commit:            true
-        pullRequestCreate: true
-        pullRequestClose:  true
-        releaseCreate:     true
-        tagCreate:         true
-  - name: in2
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: in3
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: in4
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: in5
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: out1
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: out2
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-  - name: out3
-    type: GitRepo
-    configuration:
-      gitProvider: GitIntegration
-      path: aarvyved/testpipe
-#   - name: out4
-#     type: GitRepo
-#     configuration:
-#       gitProvider: GitIntegration
-#       path: aarvyved/testpipe
-#   - name: out5
-#     type: GitRepo
-#     configuration:
-#       gitProvider: GitIntegration
-#       path: aarvyved/testpipe
-  - name: buildOut1
+      key1: value1
+      key2: value2
+  - name: buildInfoTrigger10b
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtIntegration
+      buildName: backend_build
       buildNumber: 1
-      buildName: BuildOut
-  - name: cronIn1
-    type: CronTrigger
-    configuration:
-      interval: 0 * * * *
-  - name: aqlIn1
-    type: Aql
-    configuration:
-      sourceArtifactory: ArtIntegration
-      query: items.find({"@build.name":{"$eq":"artifactory"}})
 pipelines:
-  - name: largePipeline
+  - name: canvasTest10b
+    configuration:
+      environmentVariables:
+        readOnly:
+          pipeLevel1: pipeValue1
+          pipeLevel2: pipeValue2
     steps:
-      - name: step1
+      - name: canvasTest_Root10
         type: Bash
         configuration:
           inputResources:
-            - name: in1
-          outputResources:
-            - name: out1
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
         execution:
           onExecute:
-            - sleep 10
-      - name: step2
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out1
-          outputResources:
-            - name: out2
-        execution:
-          onExecute:
-            - sleep 10
+            - sleep 1
             - echo "done"
-      - name: step3
+      - name: canvasTest10_1_1_1
         type: Bash
         configuration:
-          inputResources:
-            - name: out1
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-      - name: step4
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out1
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-      - name: step5
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out1
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-      - name: step6
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out1
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-      - name: step7
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out2
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-      - name: step8
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out2
-          outputResources:
-            - name: out3
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-      - name: step9
-        type: Bash
-        configuration:
-          inputResources:
-            - name: out3
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-
-  - name: withSteplets
-    steps:
-      - name: step1
-        type: Matrix
-        stepletMultipliers:
           environmentVariables:
-            - steplet: 1
-            - steplet: 2
-            - steplet: 3
-            - steplet: 4
-        execution:
-          onExecute:
-            - sleep 5
-            - echo $steplet_id
-            - echo "done"
-      - name: step2
-        type: Bash
-        configuration:
+            stepLevel1: stepValue1
+            stepLevel2: stepValue2
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
           inputSteps:
-            - name: step1
+            - name: canvasTest_Root10
         execution:
           onExecute:
-            - sleep 10
+            - sleep 1
             - echo "done"
-  - name: resourcesPipeline
-    steps:
-      - name: step1
+      - name: canvasTest10_1_2_1
         type: Bash
         configuration:
           inputResources:
-            - name: in2
-          outputResources:
-            - name: aqlIn1
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
         execution:
           onExecute:
-            - sleep 10
+            - sleep 1
             - echo "done"
-      - name: step2
+      - name: canvasTest10_1_3_1
         type: Bash
         configuration:
           inputResources:
-            - name: aqlIn1
-          outputResources:
-            - name: buildOut1
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
         execution:
           onExecute:
-            - sleep 10
+            - sleep 1
             - echo "done"
+      - name: canvasTest10_1_4_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest10_1_5_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest10_1_6_1
+        type: Bash
+        configuration:
+          affinityGroup: groupa
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest10_1_7_1
+        type: Bash
+        configuration:
+          affinityGroup: groupb
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest10_1_8_1
+        type: Bash
+        configuration:
+          affinityGroup: groupa
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest10_1_9_1
+        type: Bash
+        configuration:
+          affinityGroup: groupb
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      - name: canvasTest10_1_10_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: propertyCanvas10b
+            - name: buildInfoTrigger10b
+          inputSteps:
+            - name: canvasTest_Root10
+        execution:
+          onExecute:
+            - sleep 1
+            - echo "done"
+      
