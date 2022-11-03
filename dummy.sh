@@ -1,1 +1,1 @@
-main dummy dummy dummy
+main dummy
