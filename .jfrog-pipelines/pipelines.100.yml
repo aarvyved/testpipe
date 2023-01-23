@@ -14,7 +14,7 @@ resources:
 pipelines:
   - name: canvasTest100
     steps:
-      - name: canvasTest_Root100
+      - name: canvasTest_Root500
         type: Bash
         configuration:
           inputResources:
